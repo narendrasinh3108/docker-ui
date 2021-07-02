@@ -231,6 +231,13 @@ body {
   width: 50px;
   margin-top: 150px;
 }
+	   
+div #d1{
+  background-color: black;
+  width: 600px;
+  max-height: 500px;
+  overflow: auto;
+}
 </style>
 </head>
 <body>
@@ -297,8 +304,7 @@ body {
 
                 var xhr = new XMLHttpRequest();
                 // here fasle means sync and true means async with AJAX
-                xhr.open("GET", "http://192.168.43.125/cgi-bin/home.py?x=" + i, true);
-                // here write IP(192.168.43.125) after config your IP adress using - (ifconfig enp0s3)
+                xhr.open("GET", "http://127.0.0.1/cgi-bin/code.py?x=" + i, true);
                 xhr.send();
 
 		        // here  onload will take the return text from server [cgi-bin folder]
